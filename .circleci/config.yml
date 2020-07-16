@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-    - image: circleci/python:3.6.4
+    - image: circleci/python:3.7/5
     steps:
       - checkout
       - run: pip install --upgrade pip
@@ -18,4 +18,3 @@ jobs:
       - store_artifacts:
           path: ./Notebook.html
           destination:  Notebook.html
-
