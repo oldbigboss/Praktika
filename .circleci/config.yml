@@ -7,9 +7,10 @@ jobs:
       - checkout
       - run: sudo pip install jupyter_client
       - run: sudo pip install nbconvert
-      - run: sudo pip install numpy
-      - run: sudo pip install matplotlib
-      - run: sudo pip install sklearn
+      - run: sudo pip install requests 
+      - run: sudo pip install bs4
+      - run: sudo pip install pillow
+      - run: sudo pip install random
       - run: sudo python3 -m pip install ipykernel
       - run: sudo python3 -m ipykernel install --user
       - run: jupyter nbconvert --execute ./picscraper.ipynb --to html
