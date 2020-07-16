@@ -1,4 +1,6 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
+# Use a package of configuration called an orb.
 jobs:
   build:
     docker:
@@ -7,12 +9,14 @@ jobs:
       - checkout
       - run: sudo pip install jupyter_client
       - run: sudo pip install nbconvert
-      - run: sudo pip install numpy
-      - run: sudo pip install matplotlib
-      - run: sudo pip install sklearn
+      - run: sudo pip install requests
+      - run: sudo pip install bs4
+      - run: sudo pip install random
+      - run: sudo pip install pillow
       - run: sudo python3 -m pip install ipykernel
       - run: sudo python3 -m ipykernel install --user
       - run: jupyter nbconvert --execute ./picscraper.ipynb --to html
       - store_artifacts:
-          path: ./p.html
+          path: ./ppp.html
           destination: test-reports
+          
