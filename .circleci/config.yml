@@ -18,4 +18,4 @@ jobs:
       - store_artifacts:
           path: ./Notebook.html
           destination:  Notebook.html
-          
+
