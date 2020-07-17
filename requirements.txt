@@ -2,5 +2,4 @@ jupyter_client
 nbconvert
 requests
 bs4
-random
 pillow
